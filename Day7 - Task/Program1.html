@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lists Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+
+      ul,
+      ol {
+        margin-left: 20px;
+      }
+
+      li {
+        padding: 6px;
+      }
+
+      .nested ul {
+        margin-top: 5px;
+        background: #f1f9ff;
+        padding: 10px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Unordered List -->
+      <h2>🛒 Shopping List (Unordered List)</h2>
+      <ul>
+        <li>Fruits</li>
+        <li>Vegetables</li>
+        <li>Snacks</li>
+      </ul>
+
+      <!-- Ordered List -->
+      <h2>📋 Steps to Make Tea (Ordered List)</h2>
+      <ol>
+        <li>Boil water</li>
+        <li>Add tea powder</li>
+        <li>Add milk</li>
+        <li>Add sugar</li>
+        <li>Serve hot</li>
+      </ol>
+
+      <!-- Nested List -->
+      <h2>📦 Nested Shopping List</h2>
+      <ul class="nested">
+        <li>
+          Fruits
+          <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+          </ul>
+        </li>
+        <li>
+          Vegetables
+          <ul>
+            <li>Carrot</li>
+            <li>Potato</li>
+            <li>Tomato</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
