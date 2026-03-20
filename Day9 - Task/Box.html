@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Real Box Model Example</title>
+
+    <style>
+      body {
+        background-color: #eef2f7;
+        font-family: Arial, sans-serif;
+      }
+
+      .box {
+        /* Layout */
+        width: 320px;
+        margin: 60px auto; /* center horizontally + space outside */
+
+        /* Border */
+        border: 2px solid #007bff;
+        border-radius: 10px;
+
+        /* Padding */
+        padding: 20px;
+
+        /* Content styling */
+        background-color: #ffffff;
+        color: #333;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .box h2 {
+        margin-top: 0;
+        color: #007bff;
+      }
+
+      .box p {
+        line-height: 1.5;
+      }
+
+      .box button {
+        margin-top: 15px;
+        padding: 10px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .box button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>New Message</h2>
+      <p>
+        You have received a new notification. Check your inbox to read the full
+        message.
+      </p>
+      <button>View Message</button>
+    </div>
+  </body>
+</html>
