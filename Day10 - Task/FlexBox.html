@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Program</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;        /* change to column if needed */
+      justify-content: center;    /* horizontal alignment */
+      align-items: center;        /* vertical alignment */
+      gap: 20px;                  /* space between boxes */
+      height: 100vh;
+      background: #f2f2f2;
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      background: teal;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+</html>
