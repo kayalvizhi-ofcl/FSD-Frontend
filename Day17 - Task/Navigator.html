@@ -1,0 +1,16 @@
+<button onclick="jackRoute()">Ask Jack</button>
+<button onclick="aliceRoute()">Ask Alice</button>
+
+<p id="routeOutput"></p>
+
+<script>
+function jackRoute() {
+    document.getElementById("routeOutput").innerText =
+        "Jack says: Take the north route through the mountains.";
+}
+
+function aliceRoute() {
+    document.getElementById("routeOutput").innerText =
+        "Alice says: Take the south route along the river.";
+}
+</script>
