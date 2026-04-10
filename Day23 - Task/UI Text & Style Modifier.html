@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Demo</title>
+</head>
+<body>
+
+  <h2 id="title">Welcome</h2>
+  <p id="para">This is old content.</p>
+
+  <button onclick="changeContent()">Click Me</button>
+
+  <script>
+    function changeContent() {
+      // 1. Change text
+      document.getElementById("title").innerText = "Hello JavaScript!";
+
+      // 2. Change paragraph content
+      document.getElementById("para").innerHTML = "Content has been updated! 🎉";
+
+      // 3 & 4. Change style (color + font size)
+      let para = document.getElementById("para");
+      para.style.color = "green";
+      para.style.fontSize = "22px";
+
+      let title = document.getElementById("title");
+      title.style.color = "blue";
+      title.style.fontSize = "28px";
+    }
+  </script>
+
+</body>
+</html>
