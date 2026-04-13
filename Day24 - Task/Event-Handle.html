@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Example</title>
+</head>
+<body>
+
+    <h2>Event Handling Demo</h2>
+
+    <!-- Input field -->
+    <input type="text" id="nameInput" placeholder="Type something...">
+    <p id="output"></p>
+
+    <!-- Button -->
+    <button id="btn">Click Me</button>
+
+    <script>
+        // Select elements
+        const input = document.getElementById("nameInput");
+        const output = document.getElementById("output");
+        const button = document.getElementById("btn");
+
+        // 1 & 2: Show input value while typing
+        input.addEventListener("input", function() {
+            output.textContent = "You typed: " + input.value;
+        });
+
+        // 3: Button click event
+        button.addEventListener("click", function() {
+            alert("Button clicked! Value is: " + input.value);
+        });
+    </script>
+
+</body>
+</html>
