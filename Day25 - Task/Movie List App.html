@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List App</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎬 Movie List App</h1>
+
+    <!-- Input fields -->
+    <input type="text" id="movieName" placeholder="Enter movie name">
+    <input type="number" id="movieRating" placeholder="Enter rating">
+
+    <br>
+
+    <!-- Button -->
+    <button onclick="addMovie()">Add Movie</button>
+
+    <!-- Output -->
+    <h2 id="output"></h2>
+
+    <script>
+        // Using const (fixed value)
+        const appName = "Movie List App";
+
+        // Function with default parameters
+        function addMovie(name = "Unknown Movie", rating = 0) {
+
+            // Get values from input (if provided)
+            let movieInput = document.getElementById("movieName").value;
+            let ratingInput = document.getElementById("movieRating").value;
+
+            // Use entered values OR default values
+            let finalName = movieInput || name;
+            let finalRating = ratingInput || rating;
+
+            // Template literal
+            const message = `${appName}: ${finalName} has a rating of ${finalRating}/10`;
+
+            // Display result
+            document.getElementById("output").textContent = message;
+
+            // Clear inputs
+            document.getElementById("movieName").value = "";
+            document.getElementById("movieRating").value = "";
+        }
+
+        // Example using let (can change)
+        let sampleMovie = "Inception";
+        let sampleRating = 9;
+
+        // Call function initially
+        addMovie(sampleMovie, sampleRating);
+    </script>
+
+</body>
+</html>
