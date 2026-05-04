@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Cards</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      width: 150px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h4 {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Movie List</h2>
+
+<div class="container" id="movieContainer"></div>
+
+<script>
+  const movies = [
+    {
+      name: "Inception",
+      image: "Inception.jpg"
+    },
+    {
+      name: "Avatar",
+      image: "Avatar.webp"
+    },
+    {
+      name: "Titanic",
+      image: "Titanic.webp"
+    },
+    {
+      name: "Interstellar",
+      image: "Interstellar.webp"
+    }
+  ];
+
+  const container = document.getElementById("movieContainer");
+
+  movies.forEach(movie => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img src="${movie.image}" alt="${movie.name}">
+      <h4>${movie.name}</h4>
+    `;
+
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
